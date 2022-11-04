@@ -1,4 +1,4 @@
-name: annotation_env
+# name: annotation_env
 channels:
   - defaults
 dependencies:
@@ -11,4 +11,4 @@ dependencies:
     - streamlit
     - torch
     - transformers
-prefix: /anaconda/envs/annotation_env
+# prefix: /anaconda/envs/annotation_env
