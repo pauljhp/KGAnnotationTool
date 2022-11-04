@@ -1,0 +1,4 @@
+{"part_of": 1, "work_for": 2, "director": 3,
+"is_instance": 4, "has_poasitive_relation": 5, 
+"has_negative_relation": 6, "has_relation": 7,
+"related_to": 8, "org_established_in": 9}
