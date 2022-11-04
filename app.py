@@ -103,7 +103,7 @@ st.markdown("#### Annotate Relations:")
 # select head and tail
 max_relations = st.select_slider(
     label="slide this to increase the max # of relations",
-    options=range(1, 10),
+    options=range(1, 20),
     value=3,
     key=KEY_NO)
 KEY_NO += 1
