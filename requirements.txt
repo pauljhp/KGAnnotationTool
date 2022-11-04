@@ -1,0 +1,8 @@
+python==3.10
+pip
+pandas
+transformers
+sentencepiece
+streamlit
+torch
+transformers
