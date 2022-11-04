@@ -1,7 +1,7 @@
 # Small tool for annotating text
 
 ## Installation
-- clone this repository then run `$ conda create -f environment.yml`
+- clone this repository then run `$ conda env create -f environment.yml`
 - Run `$ conda activate annotation_env` to activate the environment
 
 ## Running the app
