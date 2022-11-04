@@ -1,5 +1,4 @@
-{
-    "ORG": 1, 
+{"ORG": 1, 
     "GEO": 2, 
     "PEOP": 3, 
     "ABS": 4, // abstract
