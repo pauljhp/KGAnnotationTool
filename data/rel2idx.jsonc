@@ -18,4 +18,5 @@
 "compete_with": 18,
 "partners_with": 19,
 "has_negative_relation_with": 20,
-"has_positive_relation_with": 21}
+"has_positive_relation_with": 21,
+"acquired_by": 22}
