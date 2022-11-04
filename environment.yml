@@ -5,7 +5,7 @@ dependencies:
   - python==3.10
   - pip
   - pandas
-  - transformers
+  - numpy
   - pip:
     - sentencepiece
     - streamlit
