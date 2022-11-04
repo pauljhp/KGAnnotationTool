@@ -3,4 +3,4 @@
 "has_negative_relation": 6, "has_relation": 7,
 "related_to": 8, "org_established_in": 9,
 "has_influence": 10, "causes": 11,
-"produce": 12, "provide": 13, "save_as": 14}
+"produce": 12, "provide": 13, "same_as": 14}
