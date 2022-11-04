@@ -49,7 +49,7 @@ with DATA_P.joinpath("ner2idx.jsonc").open("r") as f:
 
 
 # process sentence
-sentence_str = st.text_input("Enter your sentence:",
+sentence_str = st.text_area("Enter your sentence:",
     key=KEY_NO)
 KEY_NO += 1
 tokens = tokenizer.tokenize(sentence_str)
