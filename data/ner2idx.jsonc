@@ -1,2 +1,9 @@
-{"ORG": 1, "GEO": 2, "PEOP": 3, "ABS": 4,
-"PROD": 5, "SERV": 6}
+{
+    "ORG": 1, 
+    "GEO": 2, 
+    "PEOP": 3, 
+    "ABS": 4, // abstract
+    "PROD": 5, // product
+    "SERV": 6, // service
+    "EVT": 7 // event
+}
