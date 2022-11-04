@@ -142,7 +142,14 @@ elif isinstance(SAVE_JSON, dict):
 else:
     raise TypeError(f"unrecognized file type {SAVEFILE.as_posix()}")
 
-st.text(f"Saving to {SAVEFILE.as_posix()}...")
-with SAVEFILE.open("w") as f:
-    save_str = json.dumps(SAVE_JSON)
-    f.write(save_str)
+st.text("Please click save to save your inputs")
+KEY_NO += 1
+SAVE = st.button("Save", key=KEY_NO)
+KEY_NO += 1
+
+if SAVE:
+    st.text(f"Saving to {SAVEFILE.as_posix()}...")
+    with SAVEFILE.open("w") as f:
+        save_str = json.dumps(SAVE_JSON)
+        st.text(save_str)
+        f.write(save_str)
