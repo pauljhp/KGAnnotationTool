@@ -153,3 +153,6 @@ if SAVE:
         save_str = json.dumps(SAVE_JSON)
         st.text(save_str)
         f.write(save_str)
+
+with SAVEFILE.open("r") as f:
+    st.download_button("Download *.json file", f)
