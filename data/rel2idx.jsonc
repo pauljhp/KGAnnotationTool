@@ -13,4 +13,9 @@
 "provide": 13, 
 "same_as": 14,
 "operate_in_environment": 15, 
-"has_customer": 16}
+"has_customer": 16,
+"supply": 17,
+"compete_with": 18,
+"partners_with": 19,
+"has_negative_relation_with": 20,
+"has_positive_relation_with": 21}
