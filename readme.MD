@@ -1,4 +1,4 @@
-# Small tool for annotating text
+# Small tool for annotating text for NER and relation extraction
 
 ## Installation
 - clone this repository then run `$ conda env create -f environment.yml`
