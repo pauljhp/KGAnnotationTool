@@ -28,9 +28,11 @@ class SlidingList(list):
                 else:
                     yield self.data[i: i + window_size]
 
-def is_numeric(char: Optional[str]=None):
+def is_numeric(char: Optional[Union[str, int]]=None):
     """takes single char"""
     if char:
+        if isinstance(char, int):
+            return True
         char_str = str(char)
         assert len(char_str) == 1, "is_numeric only takes one char!"
         if ord(char_str) in range(48, 58):
@@ -40,9 +42,12 @@ def is_numeric(char: Optional[str]=None):
     else:
         return False
 
-def str_is_int(string: str):
-    assert isinstance(string, str), "only str values allowed"
-    for i in string:
+def str_is_int(input: Union[int, str]):
+    if isinstance(input, int):
+        return True
+    else:
+        assert isinstance(input, str), "only str or int values allowed"
+    for i in input:
         if not is_numeric(i):
             return False
     return True

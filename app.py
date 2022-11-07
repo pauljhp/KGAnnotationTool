@@ -57,13 +57,14 @@ SAVE_DATA = {}
 
 if len(SAVE_JSON):
     try:
-        contents = SAVE_JSON[0]
-        TOKS = contents.get("tokens")
-        org_types = np.unique([org.get("type") for org in contents.get("entities")])
-        ORG_IDS = {org_type: [] for org_type in org_types}
-        for org_type, org_ids in ORG_IDS.items():
-            ORG_IDS[org_type] += [int(org.get("org_id")) for org in contents.get("entities") 
-                if org.get("org_id") and utils.str_is_int(org.get("org_id"))]
+        for i, contents in enumerate(SAVE_JSON):
+            TOKS = contents.get("tokens")
+            org_types = np.unique([org.get("type") for org in contents.get("entities")])
+            if i < 1:
+                ORG_IDS = {org_type: [] for org_type in org_types}
+            for org_type, org_ids in ORG_IDS.items():
+                ORG_IDS[org_type] += list(np.unique([int(org.get("org_id")) for org in contents.get("entities") 
+                    if (org.get("org_id") and utils.str_is_int(org.get("org_id")))]))
 
     except Exception as e:
         LOGGER.log(msg=e, level=logging.DEBUG)
@@ -134,21 +135,23 @@ while i <= int(max_entities):
         key=KEY_NO)
     KEY_NO += 1
 
-    if ORG_IDS.get("type"):
-        org_id = max(ORG_IDS.get("type")) + 1
-        ORG_IDS[ent_type].append(org_id)
+    if ORG_IDS.get(ent_type):
+        org_id = max(ORG_IDS.get(ent_type)) + 1
+        ORG_IDS[ent_type] += [org_id]
     else:
         org_id = 1
         ORG_IDS[ent_type] = [org_id]
+    
     named_entities.append(
         {"type": ent_type,
         "start": ent_span[0],
         "end": ent_span[1],
-        "org_id": org_id}
+        "org_id": int(org_id)}
         )
     ne_names[ent] = i - 1
     i += 1
 del i
+st.text(ORG_IDS)
 
 SAVE_DATA["entities"] = named_entities
 
