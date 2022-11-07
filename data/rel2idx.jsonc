@@ -19,4 +19,6 @@
 "N-has_negative_relation_with": 19,
 "N-has_positive_relation_with": 20,
 "E-org_acquired_by": 21,
-"E-org_located_in": 22}
+"E-org_located_in": 22,
+"N-org_has_location_in": 23,
+"N-org_has_attribute": 24}
