@@ -3,6 +3,7 @@ import backend
 from pathlib import Path
 import json
 import utils
+improt random
 import datetime as dt
 
 KEY_NO = 0
@@ -134,6 +135,9 @@ while i <= int(max_relations):
     i += 1
 
 SAVE_DATA["relations"] = relations
+
+j=random.randint(0,2000)
+SAVE_DATA["orig_id"] = j
 
 if isinstance(SAVE_JSON, list):    
     SAVE_JSON.append(SAVE_DATA)
