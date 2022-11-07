@@ -21,7 +21,7 @@ DATA_P = Path("./data")
 st.title("Annotation Tool for relation extration")
 
 uploaded_file = st.file_uploader("Upload your json annotation file here",
-    type=["json", "jsonl", "jsonc"],
+    type=["json", "jsonl", "jsonc", "txt"],
     key=KEY_NO)
 KEY_NO += 1
 
