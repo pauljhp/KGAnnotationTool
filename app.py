@@ -151,7 +151,7 @@ while i <= int(max_entities):
     ne_names[ent] = i - 1
     i += 1
 del i
-st.text(ORG_IDS)
+# st.text(ORG_IDS)
 
 SAVE_DATA["entities"] = named_entities
 
